@@ -1,4 +1,4 @@
-package com.java.training.lambda;
+package com.java.training.day3.lambda;
 
 import java.util.ArrayList;
 import java.util.List;

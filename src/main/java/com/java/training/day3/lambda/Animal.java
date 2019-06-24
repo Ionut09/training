@@ -1,4 +1,4 @@
-package com.java.training.lambda;
+package com.java.training.day3.lambda;
 
 public class Animal {
     private String species;
