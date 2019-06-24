@@ -2,10 +2,24 @@ package com.java.training.day1.operators_statements;
 
 public class Statements {
     public static void main(String[] args) {
-        ifStatement("dibasdjbalskj");
-        switchStatement("test");
-        whileStatement("jdsahkjks=======");
-        forStatement("qwertyuio");
+        byte a = 3, b = 2;
+        byte sum = (byte) (a + b); //rezultatul operatiei a 2 nre intregi e un int
+        int i = 1;
+        int j = 1;
+        i++;
+        System.out.println(i);
+        System.out.println(++j);
+        Integer q;
+        Long l;
+
+        System.out.println(a / b); //rezultatul operatiei a 2 nre intregi e un int
+        System.out.println(a / 2.0);
+        System.out.println((double) a / b);
+//
+//        ifStatement("dibasdjbalskj");
+//        switchStatement("test");
+//        whileStatement("jdsahkjks=======");
+//        forStatement("qwertyuio");
     }
 
     static void ifStatement(String input) {
@@ -63,12 +77,18 @@ public class Statements {
         int[] arrayDef = new int[8];//{0,0,....}
         int arrayDef1[] = new int[8];//{0,0,....}
 
+        BUCLA_MARE:
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
+            BUCLA_MICA:
+            for (char temp : array) {
+                System.out.println(temp);
+                if (temp == 'a') {
+                    continue BUCLA_MARE;
+                }
+            }
         }
 
-        for (char temp : array) {
-            System.out.println(temp);
-        }
+
     }
 }
