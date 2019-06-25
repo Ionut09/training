@@ -1,10 +1,13 @@
 package com.java.training.day1.building_blocks;
 
-public class Dog {
+import com.java.training.day1.class_design.Domestic;
+
+public class Dog implements Domestic {
 
     int age;     //0     variabila de instanta          //2
     public String name;  //null
     static int numberOfLegs; // variabila statica
+
     //this is an instance initializer
     {
         //1
@@ -12,29 +15,43 @@ public class Dog {
         age = 6;
     }
 
-    static{
+    static {
         //System.out.println("in static block" + name);
     }
 
-    public Dog(int age, String name){
+    public Dog(int age, String name) {
         this.age = age;
         this.name = name;
     }
 
-    public Dog(String name, int age){
+    public Dog(String name, int age) {
         this.age = age;
         this.name = name;
     }
-    public Dog(){
+
+    public Dog() {
         //3
         this(1, "Doggie"); //must be first statement
         System.out.println("In Dog constructor");
     }
-    void methodInDog(){
+
+    @Override
+    public void eats() {
+        System.out.println("Dog eats");
+
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println("dog sleep");
+
+    }
+
+    void methodInDog() {
         System.out.println("Dog class method");
     }
 
-    static void howManyLegs(){
+    static void howManyLegs() {
 //        methodInDog();
 //        System.out.println(age);
         System.out.println("numberOfLegs --> " + numberOfLegs);
