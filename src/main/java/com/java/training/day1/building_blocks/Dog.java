@@ -3,7 +3,7 @@ package com.java.training.day1.building_blocks;
 public class Dog {
 
     int age;     //0     variabila de instanta          //2
-    String name;  //null
+    public String name;  //null
     static int numberOfLegs; // variabila statica
     //this is an instance initializer
     {
@@ -38,5 +38,14 @@ public class Dog {
 //        methodInDog();
 //        System.out.println(age);
         System.out.println("numberOfLegs --> " + numberOfLegs);
+    }
+
+
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "age=" + age +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
