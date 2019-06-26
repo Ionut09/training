@@ -12,5 +12,8 @@ repositories {
 }
 
 dependencies {
+
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.8'
+    compile group: 'org.springframework.boot', name: 'spring-boot', version: '2.1.6.RELEASE'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
