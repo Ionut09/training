@@ -3,8 +3,7 @@ package com.java.training.day3.streams;
 import java.util.Arrays;
 import java.util.List;
 
-public class TradingApplication {
-
+public class TradingApplicationTest {
     Trader raoul = new Trader("Raoul", "Cambridge");
     Trader mario = new Trader("Mario", "Milan");
     Trader alan = new Trader("Alan", "Cambridge");
@@ -18,4 +17,5 @@ public class TradingApplication {
             new Transaction(mario, 2012, 700),
             new Transaction(alan, 2012, 950)
     );
+
 }

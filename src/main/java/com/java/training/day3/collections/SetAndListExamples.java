@@ -1,12 +1,8 @@
 package com.java.training.day3.collections;
 
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.LinkedList;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
-public class LinkedListExamples {
+public class SetAndListExamples {
 
     public static void main(String[] args) {
         LinkedList<String> animals = new LinkedList<>();
@@ -22,12 +18,12 @@ public class LinkedListExamples {
 
         System.out.println(animals);
         // boolean test(T t);
-        animals.removeIf((String element) -> {return element.equals("dog");});
+        animals.removeIf((String element) -> {return element.equals("dog");});//elimina elementele care indeplinesc conditia din Predicate
         System.out.println(animals);
 
 
         System.out.println("=====================================");
-        Set<String> students = new TreeSet<>(); //tip de set sortat
+        Set<String> students = new TreeSet<>(); //TreeSet --> implementare de set sortat
         System.out.println(students.add("Diana"));
         System.out.println(students.add("Diana"));
         System.out.println(students.add("Andrei"));
@@ -36,7 +32,7 @@ public class LinkedListExamples {
         System.out.println(students);
 
         Set<Student> students1 = new TreeSet<>(); //doar la LinkedHashSet se pastreaza ordinea, nu si la HashSet
-                                    //ClassCastException daca clasa adaugata in TreeSet Nu implementeaza java.lang.Comparable
+                                    //ClassCastException daca clasa adaugata in TreeSet nu implementeaza java.lang.Comparable
         students1.add(new Student("Andrei", 25));
         students1.add(new Student("Andrei", 25));
         students1.add(new Student("Andrei", 25));
